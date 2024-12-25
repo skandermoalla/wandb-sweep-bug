@@ -1,0 +1,11 @@
+project: wandb-sweep-bug
+name: some-sweep
+method: grid
+parameters:
+  n:
+    values: [2, 3, 4]
+
+command:
+  - python
+  - main.py
+  - ${args_no_hyphens}

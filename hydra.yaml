@@ -1,0 +1,13 @@
+hydra:
+  run:
+    dir: outputs/${n}
+  job:
+    chdir: true
+  verbose: false  # Set to true for logging at debug level.
+
+n: 1
+wandb_project: wandb-sweep-bug
+
+# Remove this key and sweeps will work.
+some_key_that_is_never_passed_as_argument_but_added_by_sweeps_when_resuming:
+  some_subkey: foo
